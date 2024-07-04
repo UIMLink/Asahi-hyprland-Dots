@@ -1,0 +1,39 @@
+/* ---- By UIM_Link ---- */
+
+{
+"include": "~/.config/waybar/modules",
+"layer": "top",
+"exclusive": true,
+"passthrough": false,
+"position": "top",
+"spacing": 1,
+"fixed-center": true,
+"ipc": true,
+"margin-top": 0,
+"margin-left": 0,
+"margin-right": 0,
+"margin-bottom": 1,
+
+"custom/icon": {
+        "format": "  ", //for fedora
+		//"format": " 󰣇 ", //for arch 
+		"on-click": "rofi -show drun",
+		"on-click-right": "~/.config/hypr/UserScripts/WallpaperSelect.sh",
+		"tooltip-format": "Fedora Linux Asahi Remix 40"
+},
+
+"modules-left": [
+	"custom/separator#blank",
+	"custom/icon",
+	"hyprland/workspaces#rw"
+	],
+
+"modules-right": [
+	"mpris",
+	"tray",
+	"pulseaudio",
+	"battery",
+	"custom/swaync",
+	"clock"
+	]
+}
